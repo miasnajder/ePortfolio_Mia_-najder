@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="hr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Stranice - Moj Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <a href="index.html">
+                    <img src="./MŠ.png" alt="Logo" class="logo-img">
+                </a>
+            </div>
+            <nav>
+                <a href="index.html">Početna</a>
+                <a href="o-meni.html">O meni</a>
+                <a href="radovi.html" class="active">Radovi</a>
+                <a href="kontakt.html">Kontakt</a>
+            </nav>
+        </header>
+
+        <section class="category-section">
+            <h1 class="page-title">Web <span>Stranice</span></h1>
+
+            <div class="project-list">
+                <div class="project-item">
+                    <div class="project-image"><span>Slika web stranice 1</span></div>
+                    <div class="project-details">
+                        <h2>Korporativni Web</h2>
+                        <p>Izrada moderne web stranice za lokalnu tvrtku s fokusom na prezentaciju usluga i kontakt
+                            formu.</p>
+                        <a href="#" class="btn-link" target="_blank">Pogledaj projekt <i
+                                class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="project-item">
+                    <div class="project-image"><span>Slika web stranice 2</span></div>
+                    <div class="project-details">
+                        <h2>E-commerce Shop</h2>
+                        <p>Razvoj frontend dijela web trgovine uz implementaciju responzivnog dizajna i brzog
+                            učitavanja.</p>
+                        <a href="#" class="btn-link" target="_blank">Pogledaj projekt <i
+                                class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <div class="footer-content">
+                <p>&copy; 2026 Mia Šnajder. Sva prava pridržana.</p>
+                <div class="local-time">
+                    <i class="far fa-clock"></i> Lokalno vrijeme: <span id="current-time">Učitavanje...</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

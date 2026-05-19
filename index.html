@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="hr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Moj Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- Header -->
+      <header>
+        <div class="logo">
+          <a href="index.html">
+            <img src="./MŠ.png" alt="Logo" class="logo-img" />
+          </a>
+        </div>
+        <nav>
+          <a href="index.html" class="active">Početna</a>
+          <a href="o-meni.html">O meni</a>
+          <a href="radovi.html">Radovi</a>
+          <a href="kontakt.html">Kontakt</a>
+        </nav>
+      </header>
+
+      <!-- Hero Section -->
+      <section class="hero">
+        <div class="hero-content">
+          <span class="subtitle">— Uvod</span>
+          <h1 class="hero-name">Mia <span class="gradient-text">Šnajder.</span></h1>
+          <h2 class="hero-title">
+            Studentica informatike i budući Web Dizajner i Developer, bazirana u Hrvatskoj.
+          </h2>
+          <p class="hero-desc">
+            Dizajniram i razvijam digitalna iskustva kroz web, multimediju i kreativni sadržaj.
+          </p>
+          <div class="hero-actions">
+            <a href="o-meni.html" class="btn-primary">Moja priča <i class="fas fa-arrow-right"></i></a>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-pinterest"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-image-wrapper">
+            <div class="hero-image-glow"></div>
+            <img src="ja1.jpeg" alt="Mia Šnajder" class="hero-img-element" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Carousel Section (Preporuke) -->
+      <section class="testimonial-section">
+        <h2 class="section-title">Od ideje do <span>koda.</span></h2>
+        <div class="carousel-container">
+          <div class="carousel-track">
+            <div class="carousel-slide">
+              <p class="quote">Istraživanje i analiza</p>
+              <span class="author"
+                >Razumijevanje problema, ciljane publike i analiza
+                konkurencije.</span
+              >
+            </div>
+            <div class="carousel-slide">
+              <p class="quote">Ideja i Wireframing</p>
+              <span class="author"
+                >Skiciranje strukture i slaganje prvih layouta na papiru ili u
+                Figmi.</span
+              >
+            </div>
+            <div class="carousel-slide">
+              <p class="quote">UI Dizajn i detalji</p>
+              <span class="author"
+                >Definiranje boja, tipografije i finalno poliranje svakog
+                piksela.</span
+              >
+            </div>
+            <div class="carousel-slide">
+              <p class="quote">Razvoj i implementacija</p>
+              <span class="author"
+                >Pretvaranje dizajna u funkcionalan, brz i responzivan kod
+                (HTML/CSS/JS).</span
+              >
+            </div>
+          </div>
+          <button class="carousel-btn prev-btn">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+          <button class="carousel-btn next-btn">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+      </section>
+
+      <!-- Info Section -->
+      <section class="info-section">
+        <div class="contact-info">
+          <span class="subtitle">— Kontakt</span>
+          <h2>Za sve upite i<br />diskusije.</h2>
+          <p>
+            Slobodno me kontaktirajte za suradnju, projekte ili samo da kažete
+            bok.
+          </p>
+          <a href="mailto:miasnajderr@gmail.com" class="email-link"
+            >miasnajderr@gmail.com <i class="fas fa-arrow-right"></i
+          ></a>
+        </div>
+        <div class="stats-info">
+          <h2>
+            Kreativnost se ne može potrošiti, što je više koristite, više je
+            imate.
+          </h2>
+          <p>
+            Kao studentica, fokusirana sam na praktičan rad i konstantno širenje
+            znanja kroz kreativne izazove.
+          </p>
+          <div class="stats-grid">
+            <div class="stat-item">
+              <span class="stat-number">20+</span>
+              <span class="stat-text">Ideja<br />i koncepata.</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">4</span>
+              <span class="stat-text">Timskih<br />projekata.</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services Section -->
+      <section class="services" id="services">
+        <div class="service-card highlight">
+          <i class="fas fa-cube service-icon"></i>
+          <h3>UI/UX<br />Dizajner.</h3>
+          <p>Figma, Adobe Illustrator, Canva</p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-camera service-icon"></i>
+          <h3>Fotograf/<br />Photo editor</h3>
+          <p>Adobe Photoshop, Adobe Lightroom</p>
+        </div>
+        <div class="service-card">
+          <i class="fas fa-laptop-code service-icon"></i>
+          <h3>Frontend<br />Developer.</h3>
+          <p>HTML, CSS, JavaScript</p>
+        </div>
+      </section>
+
+      <!-- Photography Gallery Section -->
+      <section class="photo-gallery">
+        <div class="gallery-header">
+          <h2 class="section-title">Istaknute <span>Fotografije</span></h2>
+          <a href="radovi.html" class="btn-link"
+            >Vidi sve <i class="fas fa-arrow-right"></i
+          ></a>
+        </div>
+        <div class="gallery-grid">
+          <div class="gallery-item large">
+            <img src="./slike - utakmice/IMG_2412.jpg" alt="Utakmica" class="bw-hover-color" />
+          </div>
+          <div class="gallery-item">
+            <img src="./slike - utakmice/IMG_2451.jpg" alt="Utakmica" class="bw-hover-color" />
+          </div>
+          <div class="gallery-item">
+            <img src="./slike - utakmice/IMG_2453.jpg" alt="Utakmica" class="bw-hover-color" />
+          </div>
+          <div class="gallery-item wide">
+            <img src="./slike - utakmice/IMG_2456.jpg" alt="Utakmica" class="bw-hover-color" />
+          </div>
+          <div class="gallery-item">
+            <img src="./slike - utakmice/IMG_2467.jpg" alt="Utakmica" class="bw-hover-color" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer>
+        <div class="footer-content">
+          <p>&copy; 2026 Mia Šnajder. Sva prava pridržana.</p>
+          <div class="local-time">
+            <i class="far fa-clock"></i> Lokalno vrijeme:
+            <span id="current-time">Učitavanje...</span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
