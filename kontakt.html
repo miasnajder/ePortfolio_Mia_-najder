@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="hr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt - Moj Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        
+        <header>
+            <div class="logo">
+                <a href="index.html"><img src="./MŠ.png" alt="Logo" class="logo-img">
+            </div>
+            <nav>
+                <a href="index.html">Početna</a>
+                <a href="o-meni.html">O meni</a>
+                <a href="radovi.html">Radovi</a>
+                <a href="kontakt.html" class="active">Kontakt</a>
+            </nav>
+        </header>
+
+        <section class="contact-section">
+            <h1 class="page-title">Javite <span>Mi Se</span></h1>
+
+            <div class="contact-container">
+                <div class="contact-info-block">
+                    <h2>Imate ideju za projekt?</h2>
+                    <p>Slobodno mi pošaljite poruku, rado ću popričati o potencijalnoj suradnji ili odgovoriti na vaša
+                        pitanja.</p>
+
+                    <div class="divider"></div>
+
+                    <h3>Email</h3>
+                    <a href="mailto:miasnajderr@gmail.com" class="email-link"
+                        style="margin-bottom: 20px;">miasnajderr@gmail.com</a>
+
+                    <h3>Društvene mreže</h3>
+                    <div class="social-links" style="margin-top: 10px;">
+                            <a href="https://www.instagram.com/miasnajder?igsh=MTd0a2x0ODBsZXMwYQ==" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+                            <a href="https://hr.linkedin.com/in/mia-%C5%A1najder-1265662b8" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+
+                <form class="contact-form" action="#" method="POST">
+                    <div class="form-group">
+                        <label for="name">Ime</label>
+                        <input type="text" id="name" placeholder="Vaše ime" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email adresa</label>
+                        <input type="email" id="email" placeholder="vaš@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Poruka</label>
+                        <textarea id="message" rows="5" placeholder="Napišite svoju poruku ovdje..."
+                            required></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">Pošalji poruku</button>
+                </form>
+            </div>
+        </section>
+        
+        <footer>
+            <div class="footer-content">
+                <p>&copy; 2026 Ime Prezime. Sva prava pridržana.</p>
+                <div class="local-time">
+                    <i class="far fa-clock"></i> Lokalno vrijeme: <span id="current-time">Učitavanje...</span>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="hr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IceEdge Galerija - Moj Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="container">
+      
+      <header>
+        <div class="logo">
+          <a href="index.html">
+            <img src="./MŠ.png" alt="Logo" class="logo-img" />
+          </a>
+        </div>
+        <nav>
+          <a href="index.html">Početna</a>
+          <a href="o-meni.html">O meni</a>
+          <a href="radovi.html" class="active">Radovi</a>
+          <a href="kontakt.html">Kontakt</a>
+        </nav>
+      </header>
+
+      
+      <section class="category-section">
+        <div style="margin-bottom: 25px;">
+          <a href="ui-ux-dizajn.html" class="btn-link">
+            <i class="fas fa-arrow-left"></i> Natrag na UI/UX dizajn
+          </a>
+        </div>
+
+        <h1 class="page-title">IceEdge <span>Galerija</span></h1>
+        
+        <p style="margin-bottom: 40px; max-width: 800px;">
+          Galerija svih zaslona dizajniranih za mobilnu i web aplikaciju IceEdge, namijenjenu hokejskim trenerima i igračima. Kliknite na bilo koju sliku zaslona za prikaz u punoj veličini.
+        </p>
+
+        
+        <div class="screenshot-grid">
+          <div class="screenshot-card">
+            <div class="screenshot-image-wrapper">
+              <img src="./iceedge-zasloni/pocetni zaslon igrac.png" alt="IceEdge početni zaslon" />
+            </div>
+            <div class="screenshot-title">Početni zaslon (Igrač)</div>
+          </div>
+
+          <div class="screenshot-card">
+            <div class="screenshot-image-wrapper">
+              <img src="./iceedge-zasloni/raspored.png" alt="IceEdge raspored" />
+            </div>
+            <div class="screenshot-title">Raspored</div>
+          </div>
+
+          <div class="screenshot-card">
+            <div class="screenshot-image-wrapper">
+              <img src="./iceedge-zasloni/evidencija dolaznosti.png" alt="IceEdge evidencija dolaznosti" />
+            </div>
+            <div class="screenshot-title">Evidencija dolaznosti</div>
+          </div>
+
+          <div class="screenshot-card">
+            <div class="screenshot-image-wrapper">
+              <img src="./iceedge-zasloni/statistika.png" alt="IceEdge statistika" />
+            </div>
+            <div class="screenshot-title">Statistika</div>
+          </div>
+
+          <div class="screenshot-card">
+            <div class="screenshot-image-wrapper">
+              <img src="./iceedge-zasloni/jedan trening.png" alt="IceEdge jedan trening" />
+            </div>
+            <div class="screenshot-title">Detalji treninga</div>
+          </div>
+
+          <div class="screenshot-card">
+            <div class="screenshot-image-wrapper">
+              <img src="./iceedge-zasloni/rang igrac.png" alt="IceEdge rang igrac" />
+            </div>
+            <div class="screenshot-title">Rang lista igrača</div>
+          </div>
+
+          <div class="screenshot-card">
+            <div class="screenshot-image-wrapper">
+              <img src="./iceedge-zasloni/chat.png" alt="IceEdge chat" />
+            </div>
+            <div class="screenshot-title">Chat (Komunikacija)</div>
+          </div>
+
+          <div class="screenshot-card">
+            <div class="screenshot-image-wrapper">
+              <img src="./iceedge-zasloni/unos osobnih podataka i ciljeva.png" alt="IceEdge unos osobnih podataka" />
+            </div>
+            <div class="screenshot-title">Unos osobnih podataka</div>
+          </div>
+
+          <div class="screenshot-card">
+            <div class="screenshot-image-wrapper">
+              <img src="./iceedge-zasloni/login.png" alt="IceEdge login" />
+            </div>
+            <div class="screenshot-title">Prijava (Login)</div>
+          </div>
+
+          <div class="screenshot-card">
+            <div class="screenshot-image-wrapper">
+              <img src="./iceedge-zasloni/sign up.png" alt="IceEdge sign up" />
+            </div>
+            <div class="screenshot-title">Registracija (Sign Up)</div>
+          </div>
+
+          <div class="screenshot-card">
+            <div class="screenshot-image-wrapper">
+              <img src="./iceedge-zasloni/oporavak lozinke.png" alt="IceEdge oporavak lozinke" />
+            </div>
+            <div class="screenshot-title">Oporavak lozinke</div>
+          </div>
+        </div>
+      </section>
+
+      
+      <div id="lightbox" class="lightbox-modal">
+        <span class="close-lightbox" id="close-lightbox">&times;</span>
+        <div class="lightbox-content-wrapper">
+          <img class="lightbox-content" id="lightbox-img" alt="Enlarged screenshot" />
+          <div id="lightbox-caption" class="lightbox-caption"></div>
+        </div>
+      </div>
+
+      
+      <footer>
+        <div class="footer-content">
+          <p>&copy; 2026 Mia Šnajder. Sva prava pridržana.</p>
+          <div class="local-time">
+            <i class="far fa-clock"></i> Lokalno vrijeme:
+            <span id="current-time">Učitavanje...</span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    
+    <script src="script.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxCaption = document.getElementById('lightbox-caption');
+        const closeLightboxBtn = document.getElementById('close-lightbox');
+        
+        
+        const cards = document.querySelectorAll('.screenshot-card');
+        
+        cards.forEach(card => {
+          card.addEventListener('click', () => {
+            const img = card.querySelector('img');
+            const title = card.querySelector('.screenshot-title').textContent;
+            
+            lightbox.style.display = 'block';
+            lightboxImg.src = img.src;
+            lightboxImg.alt = img.alt;
+            lightboxCaption.textContent = title;
+            document.body.style.overflow = 'hidden'; 
+          });
+        });
+        
+        function closeLightbox() {
+          lightbox.style.display = 'none';
+          document.body.style.overflow = ''; 
+        }
+        
+        closeLightboxBtn.addEventListener('click', closeLightbox);
+        
+        
+        lightbox.addEventListener('click', (e) => {
+          if (e.target === lightbox || e.target.classList.contains('lightbox-content-wrapper')) {
+            closeLightbox();
+          }
+        });
+        
+        
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape' && lightbox.style.display === 'block') {
+            closeLightbox();
+          }
+        });
+      });
+    </script>
+  </body>
+</html>
