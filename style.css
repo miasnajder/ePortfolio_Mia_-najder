@@ -1032,6 +1032,26 @@ img.bw-hover-color {
     padding-bottom: 80px;
 }
 
+.simple-gallery-grid.two-columns {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+}
+
+.simple-gallery-grid.two-columns .gallery-item {
+    aspect-ratio: auto;
+}
+
+.simple-gallery-grid.two-columns .gallery-item img {
+    height: auto;
+    object-fit: contain;
+}
+
+@media (max-width: 768px) {
+    .simple-gallery-grid.two-columns {
+        grid-template-columns: 1fr;
+    }
+}
+
 .simple-gallery-grid .gallery-item {
     aspect-ratio: 1/1;
     /* Kvadratne slike */
@@ -1074,6 +1094,24 @@ img.bw-hover-color {
     object-fit: cover;
 }
 
+.mockup-gallery {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+    width: 100%;
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent) var(--bg-secondary);
+}
+
+.mockup-gallery img {
+    height: 300px;
+    border-radius: 8px;
+    object-fit: contain;
+    background-color: var(--bg-tertiary);
+    flex-shrink: 0;
+}
+
 .project-details h2 {
     color: var(--accent);
     margin-bottom: 15px;
@@ -1099,5 +1137,8 @@ a.work-card-link:active {
 @media (max-width: 768px) {
     .project-item {
         grid-template-columns: 1fr;
+    }
+    .mockup-gallery img {
+        height: 200px;
     }
 }
